@@ -1,6 +1,6 @@
 # Cool Cline – OpenRouter 上使用排名 \#x
 
-将 `Cline`、`Roo Cline` 和 `Bao Cline` 整合为一个无缝的 VSCode 扩展 — Cool Cline。
+Cool Cline 是一个整合了 Cline、Roo Cline 和 Bao Cline 优秀功能的 VSCode 扩展。感谢他们的贡献者！
 
 [English README.md](README.md)
 

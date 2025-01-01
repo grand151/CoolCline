@@ -1,4 +1,6 @@
 # 为 Cool Cline 做贡献
+Cool Cline 是一个整合了 Cline、Roo Cline 和 Bao Cline 优秀功能的 VSCode 扩展。感谢他们的贡献者！
+
 [English CONTRIBUTING.md](CONTRIBUTING.md)
 
 我们很高兴你有兴趣为 Cool Cline 做贡献。无论是修复 bug、添加新功能,还是改进文档,每一份贡献都让 Cool Cline 变得更智能!为了保持我们的社区充满活力和友好,所有成员都必须遵守我们的[行为准则](CODE_OF_CONDUCT.md)。

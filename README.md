@@ -1,6 +1,6 @@
 # Cool Cline – \#x on OpenRouter
 
-`Cline`, `Roo Cline`, and `Bao Cline` integrated into one seamless VSCode extension — Cool Cline.
+Cool Cline is a VSCode extension that combines the best features of Cline, Roo Cline, and Bao Cline. Thanks to all their contributors!
 
 [简体中文 README.md](README_zh.md)
 

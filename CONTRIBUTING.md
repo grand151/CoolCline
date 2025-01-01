@@ -1,4 +1,6 @@
 # Contributing to Cool Cline
+Cool Cline is a VSCode extension that combines the best features of Cline, Roo Cline, and Bao Cline. Thanks to all their contributors!
+
 [简体中文](./CONTRIBUTING-zh.md)
 
 We're thrilled you're interested in contributing to Cline. Whether you're fixing a bug, adding a feature, or improving our docs, every contribution makes Cline smarter! To keep our community vibrant and welcoming, all members must adhere to our [Code of Conduct](CODE_OF_CONDUCT.md).
