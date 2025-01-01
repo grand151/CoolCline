@@ -11,7 +11,7 @@ async function buildWebview() {
             minify: true,
             sourcemap: true,
             format: "iife",
-            target: ["chrome58", "firefox57", "safari11", "edge16"],
+            target: ["chrome80", "firefox72", "safari13", "edge79"],
             loader: {
                 ".tsx": "tsx",
                 ".ts": "ts",
@@ -21,6 +21,9 @@ async function buildWebview() {
                 ".png": "dataurl",
                 ".jpg": "dataurl",
                 ".gif": "dataurl",
+                ".ttf": "file",
+                ".woff": "file",
+                ".woff2": "file"
             },
             plugins: [
                 copy({
