@@ -1,4 +1,12 @@
-# Cline (prev. Claude Dev) – \#1 on OpenRouter
+# Cool Cline – \#x on OpenRouter
+
+`Cline`, `Roo Cline`, and `Bao Cline` integrated into one seamless VSCode extension — Cool Cline.
+
+[简体中文 README.md](README_zh.md)
+
+- [cline/cline](https://github.com/cline/cline.git)
+- [RooVetGit/Roo-Cline](https://github.com/RooVetGit/Roo-Cline.git)
+- [jnorthrup/Bao-Cline](https://github.com/jnorthrup/Bao-Cline.git)
 
 <p align="center">
   <img src="https://media.githubusercontent.com/media/cline/cline/main/assets/docs/demo.gif" width="100%" />
