@@ -1,4 +1,5 @@
 # Contributing to Cool Cline
+
 Cool Cline is a VSCode extension that combines the best features of Cline, Roo Cline, and Bao Cline. Thanks to all their contributors!
 
 [简体中文](./CONTRIBUTING-zh.md)

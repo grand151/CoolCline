@@ -2,7 +2,7 @@
 // Import the module and reference it with the alias vscode in your code below
 import delay from "delay"
 import * as vscode from "vscode"
-import * as path from 'path'
+import * as path from "path"
 import { ClineProvider } from "./core/webview/ClineProvider"
 import { createClineAPI } from "./exports"
 import "./utils/path" // necessary to have access to String.prototype.toPosix

@@ -21,14 +21,7 @@
 		"url": "https://github.com/chatterzhao/cool-cline"
 	},
 	"homepage": "https://cline.bot",
-	"categories": [
-		"AI",
-		"Chat",
-		"Programming Languages",
-		"Education",
-		"Snippets",
-		"Testing"
-	],
+	"categories": ["AI", "Chat", "Programming Languages", "Education", "Snippets", "Testing"],
 	"keywords": [
 		"cline",
 		"claude",

@@ -5,9 +5,9 @@ Cool Cline 是一个整合了 [Cline](https://github.com/chatterzhao/cool-cline.
 [English README.md](README.md)
 
 两个平台同步发布
+
 - GitHub：[chatterzhao/cool-cline](https://github.com/chatterzhao/cool-cline.git)
 - Gitee：[zhaoquan/cool-cline](https://gitee.com/zhaoquan/cool-cline.git)
-
 
 认识 Cool Cline，一个能够使用你的**命令行界面**和**编辑器**的 AI 助手。
 
@@ -20,9 +20,7 @@ Cool Cline 是一个整合了 [Cline](https://github.com/chatterzhao/cool-cline.
 3. 一旦 Cool Cline 获得了所需的信息，他就能：
 
     - 创建和编辑文件，并在过程中监控代码检查器/编译器错误，使他能够主动修复诸如缺失导入和语法错误等问题。
-    
     - 直接在你的终端中执行命令并监控其输出，例如，在编辑文件后对开发服务器问题作出反应。
-    
     - 对于 Web 开发任务，Cool Cline 可以在无头浏览器中启动网站，进行点击、输入、滚动，并捕获截图和控制台日志，使他能够修复运行时错误和视觉 bug。
 
 4. 当任务完成时，Cool Cline 会通过类似 `open -a "Google Chrome" index.html` 的终端命令向你展示结果，你只需点击按钮即可运行。
@@ -35,8 +33,6 @@ Cool Cline 是一个整合了 [Cline](https://github.com/chatterzhao/cool-cline.
 Cool Cline 支持 OpenRouter、Anthropic、OpenAI、Google Gemini、AWS Bedrock、Azure 和 GCP Vertex 等 API 提供商。你还可以配置任何兼容 OpenAI 的 API，或通过 LM Studio/Ollama 使用本地模型。如果你使用 OpenRouter，扩展会获取他们的最新模型列表，让你能够在新模型推出时立即使用。
 
 扩展还会跟踪整个任务循环和单个请求的总令牌数和 API 使用成本，让你随时了解支出情况。
-
-
 
 ### 在终端中运行命令
 
@@ -60,11 +56,11 @@ Cool Cline 所做的所有更改都会记录在你文件的时间线中，提供
 
 感谢[模型上下文协议](https://github.com/modelcontextprotocol)，Cool Cline 可以通过自定义工具扩展他的能力。虽然你可以使用[社区制作的服务器](https://github.com/modelcontextprotocol/servers)，但 Cool Cline 可以创建和安装专门针对你特定工作流程的工具。只需要让 Cool Cline "添加一个工具"，他就会处理所有事情，从创建新的 MCP 服务器到将其安装到扩展中。这些自定义工具随后成为 Cool Cline 工具包的一部分，可以在未来的任务中使用。
 
--   "添加一个获取 Jira 工单的工具"：获取工单验收标准并让 Cool Cline 开始工作
+- "添加一个获取 Jira 工单的工具"：获取工单验收标准并让 Cool Cline 开始工作
 
--   "添加一个管理 AWS EC2 的工具"：检查服务器指标并扩展或缩减实例
+- "添加一个管理 AWS EC2 的工具"：检查服务器指标并扩展或缩减实例
 
--   "添加一个拉取最新 PagerDuty 事件的工具"：获取详情并让 Cool Cline 修复错误
+- "添加一个拉取最新 PagerDuty 事件的工具"：获取详情并让 Cool Cline 修复错误
 
 ### 添加上下文
 
@@ -79,20 +75,24 @@ Cool Cline 所做的所有更改都会记录在你文件的时间线中，提供
 ## 贡献
 
 要为项目做出贡献，请从我们的[贡献指南](CONTRIBUTING.md)开始了解基础知识。
+
 <details>
 <summary>本地开发说明</summary>
 
 1. 克隆仓库 _(需要 [git-lfs](https://git-lfs.com/))_:
+
     ```bash
     git clone https://github.com/chatterzhao/cool-cline.git
     ```
 
 2. 在 VSCode 中打开项目：
+
     ```bash
     code cline
     ```
 
 3. 安装扩展和 webview-gui 所需的依赖：
+
     ```bash
     bun run install:all
     ```

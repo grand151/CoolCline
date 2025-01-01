@@ -1,10 +1,11 @@
 # Cool Cline – \#x on OpenRouter
 
-Cool Cline is a VSCode extension that combines the best features of  [Cline](https://github.com/chatterzhao/cool-cline.git)、[Roo Cline](https://github.com/RooVetGit/Roo-Cline.git) and [Bao Cline](https://github.com/jnorthrup/Bao-Cline.git) . Thanks to all their contributors!
+Cool Cline is a VSCode extension that combines the best features of [Cline](https://github.com/chatterzhao/cool-cline.git)、[Roo Cline](https://github.com/RooVetGit/Roo-Cline.git) and [Bao Cline](https://github.com/jnorthrup/Bao-Cline.git) . Thanks to all their contributors!
 
 [简体中文 README.md](README_zh.md)
 
-Sync release 
+Sync release
+
 - GitHub：[chatterzhao/cool-cline](https://github.com/chatterzhao/cool-cline.git)
 - Gitee：[zhaoquan/cool-cline](https://gitee.com/zhaoquan/cool-cline.git)
 
@@ -102,9 +103,9 @@ Try asking Cline to "test the app", and watch as he runs a command like `npm run
 
 Thanks to the [Model Context Protocol](https://github.com/modelcontextprotocol), Cline can extend his capabilities through custom tools. While you can use [community-made servers](https://github.com/modelcontextprotocol/servers), Cline can instead create and install tools tailored to your specific workflow. Just ask Cline to "add a tool" and he will handle everything, from creating a new MCP server to installing it into the extension. These custom tools then become part of Cline's toolkit, ready to use in future tasks.
 
--   "add a tool that fetches Jira tickets": Retrieve ticket ACs and put Cline to work
--   "add a tool that manages AWS EC2s": Check server metrics and scale instances up or down
--   "add a tool that pulls the latest PagerDuty incidents": Fetch details and ask Cline to fix bugs
+- "add a tool that fetches Jira tickets": Retrieve ticket ACs and put Cline to work
+- "add a tool that manages AWS EC2s": Check server metrics and scale instances up or down
+- "add a tool that pulls the latest PagerDuty incidents": Fetch details and ask Cline to fix bugs
 
 <!-- Transparent pixel to create line break after floating image -->
 

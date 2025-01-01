@@ -1,6 +1,6 @@
 {
-	"name": "claude-dev",
-	"displayName": "Cline (prev. Claude Dev)",
+	"name": "cool-cline",
+	"displayName": "Cool Cline",
 	"description": "Autonomous coding agent right in your IDE, capable of creating/editing files, running commands, using the browser, and more with your permission every step of the way.",
 	"version": "4.0.1",
 	"icon": "assets/icons/icon.png",
@@ -51,7 +51,7 @@
 				{
 					"id": "claude-dev-ActivityBar",
 					"title": "Cool Cline",
-					"icon": "$(robot)"
+					"icon": "assets/icons/robot_panel.svg"
 				}
 			]
 		},

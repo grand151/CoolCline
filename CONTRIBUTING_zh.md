@@ -1,4 +1,5 @@
 # 为 Cool Cline 做贡献
+
 Cool Cline 是一个整合了 Cline、Roo Cline 和 Bao Cline 优秀功能的 VSCode 扩展。感谢他们的贡献者！
 
 [English CONTRIBUTING.md](CONTRIBUTING.md)
@@ -23,39 +24,44 @@ Bug 报告帮助 Cool Cline 变得更好!在创建新问题之前,请[搜索现�
 
 任何人都可以为 Cool Cline 贡献代码,但我们要求你遵循以下准则,以确保你的贡献能够顺利集成:
 
-1. **保持 Pull Request 专注**
+1.  **保持 Pull Request 专注**
+
     - 将 PR 限制在单个功能或 bug 修复
     - 将较大的更改拆分成较小的相关 PR
     - 将更改分解为可以独立审查的逻辑提交
 
-2. **代码质量**
-> macOS 安装 bun: `curl -fsSL https://bun.sh/install | bash`
->
-> windows 安装 bun: `powershell -c "irm bun.sh/install.ps1 | iex"`
+2.  **代码质量**
 
-    - 运行 `bun run lint` 确保代码符合我们的风格指南
-    - 运行 `bun run format` 用 Prettier 格式化代码
-    - 解决提交前的任何 ESLint 警告或错误
-    - 遵循 TypeScript 最佳实践并保持类型安全
+    > macOS 安装 bun: `curl -fsSL https://bun.sh/install | bash`
+    >
+    > windows 安装 bun: `powershell -c "irm bun.sh/install.ps1 | iex"`
 
-3. **测试**
+        - 运行 `bun run lint` 确保代码符合我们的风格指南
+        - 运行 `bun run format` 用 Prettier 格式化代码
+        - 解决提交前的任何 ESLint 警告或错误
+        - 遵循 TypeScript 最佳实践并保持类型安全
+
+3.  **测试**
+
     - 为新功能添加测试
     - 运行 `bun test` 确保所有测试通过
     - 如果你的更改影响了现有测试,请更新它们
     - 在适当的情况下包含单元测试和集成测试
 
-4. **提交指南**
+4.  **提交指南**
+
     - 编写清晰、描述性的提交消息
     - 使用约定式提交格式(例如:"feat:", "fix:", "docs:")
     - 在提交中使用 #issue-number 引用相关问题
 
-5. **提交前**
+5.  **提交前**
+
     - 在最新的 main 分支上变基你的分支
     - 确保你的分支构建成功
     - 再次检查所有测试是否通过
     - 检查更改中是否有调试代码或控制台日志
 
-6. **Pull Request 描述**
+6.  **Pull Request 描述**
     - 清晰描述你的更改做了什么
     - 包含测试更改的步骤
     - 列出任何破坏性更改

@@ -742,9 +742,11 @@ const ChatView = ({ isHidden, showAnnouncement, hideAnnouncement, showHistoryVie
 					}}>
 					{showAnnouncement && <Announcement version={version} hideAnnouncement={hideAnnouncement} />}
 					<div style={{ padding: "0 20px", flexShrink: 0 }}>
-						<h2>Cool Cline</h2>
-						<p>Cool Cline is a VSCode extension that combines the best features of Cline, Roo Cline, and Bao Cline. Thanks to all their contributors!</p>
-						<h2>What can I do for you?</h2>
+						<p>
+							Cool Cline is a VSCode extension that combines the best features of Cline, Roo Cline, and
+							Bao Cline. Thanks to all their contributors!
+						</p>
+						<p>What can I do for you?</p>
 						<p>
 							Thanks to{" "}
 							<VSCodeLink
