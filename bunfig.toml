@@ -1,6 +1,12 @@
 [install]
-registry = "https://mirrors.huaweicloud.com/repository/npm/"
+registry = "https://registry.npmmirror.com/"
 scope = "*"
 
 [install."@types"]
-registry = "https://mirrors.huaweicloud.com/repository/npm/"
+registry = "https://registry.npmmirror.com/"
+
+[install."@vscode"]
+registry = "https://registry.npmmirror.com/"
+
+[install.vsce]
+registry = "https://registry.npmmirror.com/"
