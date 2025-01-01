@@ -1,12 +1,13 @@
 # Cool Cline – OpenRouter 上使用排名 \#x
 
-Cool Cline 是一个整合了 Cline、Roo Cline 和 Bao Cline 优秀功能的 VSCode 扩展。感谢他们的贡献者！
+Cool Cline 是一个整合了 [Cline](https://github.com/chatterzhao/cool-cline.git)、[Roo Cline](https://github.com/RooVetGit/Roo-Cline.git) 和 [Bao Cline](https://github.com/jnorthrup/Bao-Cline.git) 优秀功能的 VSCode 扩展。感谢他们的贡献者！
 
 [English README.md](README.md)
 
-- [cline/cline](https://github.com/cline/cline.git)
-- [RooVetGit/Roo-Cline](https://github.com/RooVetGit/Roo-Cline.git)
-- [jnorthrup/Bao-Cline](https://github.com/jnorthrup/Bao-Cline.git)
+两个平台同步发布
+- GitHub：[chatterzhao/cool-cline](https://github.com/chatterzhao/cool-cline.git)
+- Gitee：[zhaoquan/cool-cline](https://gitee.com/zhaoquan/cool-cline.git)
+
 
 认识 Cool Cline，一个能够使用你的**命令行界面**和**编辑器**的 AI 助手。
 

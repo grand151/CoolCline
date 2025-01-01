@@ -1,5 +1,9 @@
 # Change Log
 
+Cool Cline is a VSCode extension that combines the best features of Cline, Roo Cline, and Bao Cline. Thanks to all their contributors!
+
+> #######################################################################################
+
 ## [3.0.9]
 
 - Fix bug where DeepSeek v3 would incorrectly escape HTML entities in diff edits
@@ -130,7 +134,7 @@
 
 ## [2.0.6]
 
-- Update URLs to https://github.com/cline/cline
+- Update URLs to https://github.com/chatterzhao/cool-cline
 
 ## [2.0.5]
 

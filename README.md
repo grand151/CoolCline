@@ -1,15 +1,15 @@
 # Cool Cline – \#x on OpenRouter
 
-Cool Cline is a VSCode extension that combines the best features of Cline, Roo Cline, and Bao Cline. Thanks to all their contributors!
+Cool Cline is a VSCode extension that combines the best features of  [Cline](https://github.com/chatterzhao/cool-cline.git)、[Roo Cline](https://github.com/RooVetGit/Roo-Cline.git) and [Bao Cline](https://github.com/jnorthrup/Bao-Cline.git) . Thanks to all their contributors!
 
 [简体中文 README.md](README_zh.md)
 
-- [cline/cline](https://github.com/cline/cline.git)
-- [RooVetGit/Roo-Cline](https://github.com/RooVetGit/Roo-Cline.git)
-- [jnorthrup/Bao-Cline](https://github.com/jnorthrup/Bao-Cline.git)
+Sync release 
+- GitHub：[chatterzhao/cool-cline](https://github.com/chatterzhao/cool-cline.git)
+- Gitee：[zhaoquan/cool-cline](https://gitee.com/zhaoquan/cool-cline.git)
 
 <p align="center">
-  <img src="https://media.githubusercontent.com/media/cline/cline/main/assets/docs/demo.gif" width="100%" />
+  <img src="https://media.githubusercontent.com/media/chatterzhao/cool-cline/main/assets/docs/demo.gif" width="100%" />
 </p>
 
 <div align="center">
@@ -22,7 +22,7 @@ Cool Cline is a VSCode extension that combines the best features of Cline, Roo C
 <a href="https://discord.gg/cline" target="_blank"><strong>Join the Discord</strong></a>
 </td>
 <td align="center">
-<a href="https://github.com/cline/cline/discussions/categories/feature-requests?discussions_q=is%3Aopen+category%3A%22Feature+Requests%22+sort%3Atop" target="_blank"><strong>Feature Requests</strong></a>
+<a href="https://github.com/chatterzhao/cool-cline/discussions/categories/feature-requests?discussions_q=is%3Aopen+category%3A%22Feature+Requests%22+sort%3Atop" target="_blank"><strong>Feature Requests</strong></a>
 </td>
 <td align="center">
 <a href="https://cline.bot/join-us" target="_blank"><strong>We're Hiring!</strong></a>
@@ -131,7 +131,7 @@ To contribute to the project, start with our [Contributing Guide](CONTRIBUTING.m
 
 1. Clone the repository _(Requires [git-lfs](https://git-lfs.com/))_:
     ```bash
-    git clone https://github.com/cline/cline.git
+    git clone https://github.com/chatterzhao/cool-cline.git
     ```
 2. Open the project in VSCode:
     ```bash

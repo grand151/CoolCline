@@ -1,6 +1,11 @@
 # 整和 cline、Roo-Cline、Bao-Cline
 vscode 的 cline 扩展有多个 fork 版本，分别是:
-- [cline/cline](https://github.com/cline/cline.git)
+
+两个平台同步提交
+- GitHub: [chatterzhao/cool-cline](https://github.com/chatterzhao/cool-cline.git)
+- Gitee: [zhaoquan/cool-cline](https://gitee.com/zhaoquan/cool-cline.git)
+
+- [cline/cline](https://github.com/chatterzhao/cool-cline.git)
 - [RooVetGit/Roo-Cline](https://github.com/RooVetGit/Roo-Cline.git)
 - [jnorthrup/Bao-Cline](https://github.com/jnorthrup/Bao-Cline.git)
 
@@ -17,41 +22,51 @@ cd cool-cline
 
 ### 3. 添加所有源仓库作为远程仓库
 ```bash
+# 添加主要开发平台
+git remote add github git@github.com:chatterzhao/cool-cline.git
+git remote add gitee git@gitee.com:chatterzhao/cool-cline.git
+
+# 添加需要整合的上游仓库
 git remote add cline git@github.com:cline/cline.git
 git remote add roo git@github.com:RooVetGit/Roo-Cline.git
 git remote add bao git@github.com:jnorthrup/Bao-Cline.git
 ```
 
-### 4. 拉取和同步源仓库代码
-#### 4.1 初始拉取
+### 4. 同步流程最佳实践
+#### 4.1 保持双平台同步
 ```bash
-git fetch cline main && git fetch roo main && git fetch bao main
+# 1. 确保本地 develop 分支是最新的
+git checkout develop
+git pull github develop
+git pull gitee develop
+
+# 2. 拉取所有上游仓库的`特定分支`更新
+git fetch cline main && git fetch roo main && git fetch bao main && git fetch 
+github develop && git fetch gitee develop
+
+# 3. 查看各仓库的更新
+git log github/develop --not develop  # GitHub 的新提交
+git log gitee/develop --not develop   # Gitee 的新提交
+git log cline/main --not develop      # cline 的新提交
+git log roo/main --not develop        # Roo-Cline 的新提交
+git log bao/main --not develop        # Bao-Cline 的新提交
 ```
 
-#### 4.2 查看更新内容
+#### 4.2 创建同步分支
 ```bash
-# 查看各个远程仓库的 main 分支的最新变化
-git log origin/main --not develop  # 查看原始仓库的新提交
-git log cline/main --not develop   # 查看 cline 的新提交
-git log roo/main --not develop     # 查看 Roo-Cline 的新提交
-git log bao/main --not develop     # 查看 Bao-Cline 的新提交
-```
+# 创建同步分支（使用日期便于追踪）
+git checkout -b sync/$(date +%Y%m%d) develop
 
-#### 4.3 选择性合并
-不是所有更新都需要合并，你可以根据需要选择性地合并有价值的功能：
-```bash
-# 使用 cherry-pick 来只合并特定的提交
-git cherry-pick <commit-hash>
-```
+# 选择性合并上游更新
+git cherry-pick <commit-hash>  # 或 git merge <remote>/<branch>
 
-#### 4.4 定期同步最佳实践
-1. 建议每周或每两周进行一次同步检查
-2. 为每次同步创建新的分支：
-```bash
-git checkout -b sync-yyyy-mm-dd
-git merge cline/main  # 或者 cherry-pick 特定提交
-git merge roo/main    # 或者 cherry-pick 特定提交
-git merge bao/main    # 或者 cherry-pick 特定提交
+# 处理完冲突并测试后
+git checkout develop
+git merge sync/$(date +%Y%m%d)
+
+# 推送到两个平台
+git push github develop
+git push gitee develop
 ```
 
 ### 5. 创建集成分支

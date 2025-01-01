@@ -687,7 +687,7 @@ export const ChatRowContent = ({
 												<br />
 												It seems like you're having Windows PowerShell issues, please see this{" "}
 												<a
-													href="https://github.com/cline/cline/wiki/TroubleShooting-%E2%80%90-%22PowerShell-is-not-recognized-as-an-internal-or-external-command%22"
+													href="https://github.com/chatterzhao/cool-cline/wiki/TroubleShooting-%E2%80%90-%22PowerShell-is-not-recognized-as-an-internal-or-external-command%22"
 													style={{ color: "inherit", textDecoration: "underline" }}>
 													troubleshooting guide
 												</a>
@@ -867,7 +867,7 @@ export const ChatRowContent = ({
 									shell: zsh, bash, fish, or PowerShell (<code>CMD/CTRL + Shift + P</code> →
 									"Terminal: Select Default Profile").{" "}
 									<a
-										href="https://github.com/cline/cline/wiki/Troubleshooting-%E2%80%90-Shell-Integration-Unavailable"
+										href="https://github.com/chatterzhao/cool-cline/wiki/Troubleshooting-%E2%80%90-Shell-Integration-Unavailable"
 										style={{ color: "inherit", textDecoration: "underline" }}>
 										Still having trouble?
 									</a>
