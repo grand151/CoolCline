@@ -128,11 +128,11 @@
 	},
 	"scripts": {
 		"vscode:prepublish": "bun run package",
-		"compile": "bun x tsc --noEmit && bun x eslint src --ext ts && node esbuild.js",
-		"watch": "bun run watch:esbuild & bun run watch:tsc",
-		"watch:esbuild": "node esbuild.js --watch",
+		"compile": "bun x tsc --noEmit && bun x eslint src --ext ts && bun run esbuild.js",
+		"watch": "concurrently \"bun run watch:esbuild\" \"bun run watch:tsc\"",
+		"watch:esbuild": "bun run esbuild.js --watch",
 		"watch:tsc": "bun x tsc --noEmit --watch --project tsconfig.json",
-		"package": "bun run build:webview && bun run check-types && bun run lint && node esbuild.js --production",
+		"package": "bun run build:webview && bun run check-types && bun run lint && bun run esbuild.js --production",
 		"compile-tests": "bun x tsc -p ./tsconfig.test.json --outDir dist",
 		"watch-tests": "bun x tsc -p . -w --outDir dist",
 		"pretest": "bun x tsc -p ./tsconfig.test.json --outDir dist",
@@ -159,10 +159,10 @@
 		"@vscode/test-electron": "^2.4.1",
 		"esbuild": "^0.21.5",
 		"eslint": "^8.57.1",
-		"npm-run-all": "^4.1.5",
 		"prettier": "^3.4.2",
 		"should": "^13.2.3",
-		"typescript": "^5.7.2"
+		"typescript": "^5.7.2",
+		"concurrently": "^8.2.2"
 	},
 	"dependencies": {
 		"@anthropic-ai/bedrock-sdk": "^0.10.4",

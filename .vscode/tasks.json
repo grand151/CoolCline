@@ -4,67 +4,89 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"label": "watch",
-			"dependsOn": ["npm: build:webview", "npm: watch:tsc", "npm: watch:esbuild"],
+			"label": "build:webview",
+			"type": "shell",
+			"command": "cd webview-ui && bun run build",
+			"group": "build",
+			"problemMatcher": [],
 			"presentation": {
-				"reveal": "never"
+				"reveal": "always",
+				"panel": "shared"
+			},
+			"options": {
+				"env": {
+					"NODE_OPTIONS": "--no-warnings"
+				}
+			}
+		},
+		{
+			"label": "watch",
+			"dependsOn": ["build:webview", "watch:tsc", "watch:esbuild"],
+			"presentation": {
+				"reveal": "never",
+				"panel": "shared"
 			},
 			"group": {
 				"kind": "build",
 				"isDefault": true
-			}
+			},
+			"problemMatcher": [
+				"$tsc-watch",
+				{
+					"owner": "esbuild",
+					"pattern": {
+						"regexp": "^.*$",
+						"file": 1,
+						"location": 2,
+						"message": 3
+					},
+					"background": {
+						"activeOnStart": true,
+						"beginsPattern": ".*",
+						"endsPattern": ".*"
+					}
+				}
+			],
+			"isBackground": true
 		},
 		{
-			"type": "npm",
-			"script": "build:webview",
+			"label": "watch:esbuild",
+			"type": "shell",
+			"command": "bun",
+			"args": ["run", "watch:esbuild"],
 			"group": "build",
-			"problemMatcher": [],
+			"problemMatcher": {
+				"owner": "esbuild",
+				"pattern": {
+					"regexp": "^.*$",
+					"file": 1,
+					"location": 2,
+					"message": 3
+				},
+				"background": {
+					"activeOnStart": true,
+					"beginsPattern": ".*",
+					"endsPattern": ".*"
+				}
+			},
 			"isBackground": true,
-			"label": "npm: build:webview",
 			"presentation": {
-				"group": "watch",
-				"reveal": "never"
+				"reveal": "never",
+				"panel": "shared"
 			}
 		},
 		{
-			"type": "npm",
-			"script": "watch:esbuild",
+			"label": "watch:tsc",
+			"type": "shell",
+			"command": "bun",
+			"args": ["run", "watch:tsc"],
 			"group": "build",
-			"problemMatcher": "$esbuild-watch",
-			"isBackground": true,
-			"label": "npm: watch:esbuild",
-			"presentation": {
-				"group": "watch",
-				"reveal": "never"
-			}
-		},
-		{
-			"type": "npm",
-			"script": "watch:tsc",
-			"group": "build",
-			"problemMatcher": "$tsc-watch",
-			"isBackground": true,
-			"label": "npm: watch:tsc",
-			"presentation": {
-				"group": "watch",
-				"reveal": "never"
-			}
-		},
-		{
-			"type": "npm",
-			"script": "watch-tests",
 			"problemMatcher": "$tsc-watch",
 			"isBackground": true,
 			"presentation": {
 				"reveal": "never",
-				"group": "watchers"
-			},
-			"group": "build"
-		},
-		{
-			"label": "tasks: watch-tests",
-			"dependsOn": ["npm: watch", "npm: watch-tests"],
-			"problemMatcher": []
+				"panel": "shared"
+			}
 		}
 	]
 }

@@ -28,10 +28,10 @@
 		"web-vitals": "^2.1.4"
 	},
 	"scripts": {
-		"start": "react-scripts start",
-		"build": "node ./scripts/build-react-no-split.js",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject"
+		"start": "bun x react-scripts start",
+		"build": "bun run scripts/build.js",
+		"test": "bun x react-scripts test",
+		"eject": "bun x react-scripts eject"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -52,6 +52,8 @@
 		]
 	},
 	"devDependencies": {
-		"@types/vscode-webview": "^1.57.5"
+		"@types/vscode-webview": "^1.57.5",
+		"esbuild": "^0.21.5",
+		"esbuild-plugin-copy": "^2.1.1"
 	}
 }
