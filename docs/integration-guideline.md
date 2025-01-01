@@ -77,12 +77,40 @@ git checkout -b integration/main develop
 ```
 
 ### 6. 合并代码
-你可以选择合并整个分支，或者只合并特定的提交。以下是合并整个分支的示例：
+在开始合并之前，先查看需要合并的提交数量和内容：
 ```bash
-git merge cline/main
-git merge roo/main
-git merge bao/main
+# 查看需要合并的提交列表
+git log integration/cline/main..cline/main --oneline
+
+# 查看改动涉及的文件
+git diff --stat integration/cline/main..cline/main
 ```
+
+采用逐个提交合并的策略：
+```bash
+# 1. 找到最早的提交 hash
+git log integration/cline/main..cline/main --oneline | tail -n 1
+
+# 2. 合并单个提交
+git cherry-pick <commit-hash>
+
+# 3. 解决冲突（如果有的话）
+git status  # 查看冲突文件
+# 手动解决冲突
+git add .   # 添加解决后的文件
+git cherry-pick --continue
+
+# 4. 运行测试确保代码正常工作
+npm run test  # 或其他测试命令
+
+# 5. 如果测试通过，继续下一个提交
+# 如果测试失败，进行修复或 git cherry-pick --abort 重新开始
+```
+
+重复以上步骤，直到所有提交都合并完成。这种方式虽然耗时，但能确保：
+- 每个更改都经过验证
+- 问题及时发现和解决
+- 合并过程可控且可回退
 
 #### 冲突处理建议
 - 在专门的同步分支中处理冲突
