@@ -22,7 +22,10 @@ const WelcomeView = () => {
 
 	return (
 		<div style={{ position: "fixed", top: 0, left: 0, right: 0, bottom: 0, padding: "0 20px" }}>
-			<p>Cool Cline is a VSCode extension that combines the best features of Cline, Roo Cline, and Bao Cline. Thanks to all their contributors!</p>
+			<p>
+				Cool Cline is a VSCode extension that combines the best features of Cline, Roo Cline, and Bao Cline.
+				Thanks to all their contributors!
+			</p>
 
 			<p>
 				I can do all kinds of tasks thanks to the latest breakthroughs in{" "}
