@@ -1,8 +1,19 @@
 # Change Log
 
+
+
+## [4.0.1]
+cool-cline 4.0.1 版本更新，包括：
+- 合并了 cline 3.0.10 版本的更新，包括：
+  - 添加 DeepSeek 提供商支持
+  - 修复 DeepSeek 的上下文窗口限制错误
+  - 优化 DeepSeek 的价格报告
+  - 改进系统通知中的引号转义
+- 注意：有意跳过了 cline 的版本号更新提交（f4590ce），因为我们使用自己的版本管理系统
+
 Cool Cline is a VSCode extension that combines the best features of Cline, Roo Cline, and Bao Cline. Thanks to all their contributors!
 
-> #######################################################################################
+> ###################################################################
 
 ## [3.0.9]
 

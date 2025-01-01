@@ -32,7 +32,7 @@ git remote add roo git@github.com:RooVetGit/Roo-Cline.git
 git remote add bao git@github.com:jnorthrup/Bao-Cline.git
 ```
 
-### 4. 同步流程最佳实践
+### 4. 同步和合并流程
 #### 4.1 保持双平台同步
 ```bash
 # 1. 确保本地 develop 分支是最新的
@@ -40,9 +40,8 @@ git checkout develop
 git pull github develop
 git pull gitee develop
 
-# 2. 拉取所有上游仓库的`特定分支`更新
-git fetch cline main && git fetch roo main && git fetch bao main && git fetch 
-github develop && git fetch gitee develop
+# 2. 拉取所有上游仓库的更新
+git fetch cline main && git fetch roo main && git fetch bao main && git fetch github develop && git fetch gitee develop
 
 # 3. 查看各仓库的更新
 git log github/develop --not develop  # GitHub 的新提交
@@ -52,32 +51,13 @@ git log roo/main --not develop        # Roo-Cline 的新提交
 git log bao/main --not develop        # Bao-Cline 的新提交
 ```
 
-#### 4.2 创建同步分支
+#### 4.2 创建整合分支
 ```bash
-# 创建同步分支（使用日期便于追踪）
-git checkout -b sync/$(date +%Y%m%d) develop
-
-# 选择性合并上游更新
-git cherry-pick <commit-hash>  # 或 git merge <remote>/<branch>
-
-# 处理完冲突并测试后
-git checkout develop
-git merge sync/$(date +%Y%m%d)
-
-# 推送到两个平台
-git push github develop
-git push gitee develop
+# 创建整合分支（使用有意义的名称，如 cline 是指整合 cline 的更新，main 是指整合 cline 的 main 分支，develop 是指从本地 develop 分支创建这个新分支）
+git checkout -b integration/cline/main develop
 ```
 
-### 5. 创建集成分支
-> 使用 gitflow 工作流管理分支
-```bash
-# 基于 cline 的主分支创建集成分支
-git checkout -b integration/main develop
-```
-
-### 6. 合并代码
-在开始合并之前，先查看需要合并的提交数量和内容：
+#### 4.3 查看需要合并的内容
 ```bash
 # 查看需要合并的提交列表
 git log integration/cline/main..cline/main --oneline
@@ -86,7 +66,33 @@ git log integration/cline/main..cline/main --oneline
 git diff --stat integration/cline/main..cline/main
 ```
 
-采用逐个提交合并的策略：
+#### 4.4 版本管理和记录
+在合并过程中，遵循以下最佳实践：
+
+1. 当合并到上游仓库是发布版本的提交时，在 CHANGELOG.md 中记录合并的内容：
+   ```markdown
+   ## [cool-cline 新版本号]
+   - 合并了 cline x.x.x 版本的更新，包括：
+     - 具体更新内容 1
+     - 具体更新内容 2
+   - 注意：有意跳过了某些提交（提交hash），原因说明
+   ```
+
+2. 对于不需要合并的提交（如版本号更新），使用 git notes 标记：
+   ```bash
+   # 标记不需要合并的提交
+   git notes add -m "intentionally-skipped: 原因说明" <commit-hash>
+
+   # 查看提交的 note
+   git notes show <commit-hash>
+   ```
+
+这样做的好处：
+- 在 CHANGELOG 中清晰记录了合并历史
+- 通过 git notes 标记了不需要合并的提交，方便后续自动化处理
+- 保持了版本历史的清晰性
+
+#### 4.5 逐个提交合并策略
 ```bash
 # 1. 找到最早的提交 hash
 git log integration/cline/main..cline/main --oneline | tail -n 1
@@ -101,42 +107,31 @@ git add .   # 添加解决后的文件
 git cherry-pick --continue
 
 # 4. 运行测试确保代码正常工作
-npm run test  # 或其他测试命令
+bun run test  # 或其他测试命令
 
 # 5. 如果测试通过，继续下一个提交
 # 如果测试失败，进行修复或 git cherry-pick --abort 重新开始
 ```
 
-重复以上步骤，直到所有提交都合并完成。这种方式虽然耗时，但能确保：
-- 每个更改都经过验证
-- 问题及时发现和解决
-- 合并过程可控且可回退
+#### 4.6 合并完成后的操作
+1. 确保所有功能正常工作，进行全面的测试和调试
+2. 将整合分支合并回 develop：
+   ```bash
+   git checkout develop
+   git merge integration/cline/main
+   ```
+3. 推送到两个平台：
+   ```bash
+   git push github develop
+   git push gitee develop
+   ```
 
-#### 冲突处理建议
-- 在专门的同步分支中处理冲突
-- 解决冲突后进行充分测试
-- 确认无误后再合并到主分支
-
-### 7. 测试和调试
-确保所有功能正常工作，进行全面的测试和调试。
-
-### 8. 提交和推送
-```bash
-git add .
-git commit -m "Integrated changes from roo and bao"
-git checkout develop && git merge integration/main
-git pull origin develop && git push origin develop
-```
-
-### 9. 创建 Pull Request
-在你的 GitHub 仓库中，为 `integration/main` 分支创建一个 Pull Request 到 `develop` 分支。
-
-### 10. 文档和维护
-更新项目的 README 和其他文档，说明你的项目是基于哪些仓库的，并详细描述新增的功能和改进。
-
-### 11. 自动化提醒（可选）
-- 可以配置 GitHub Actions 来自动检查远程仓库的更新
-- 当有新的提交时自动发送通知
+### 5. 维护和自动化
+1. 及时更新项目文档，说明整合的功能和改进
+2. 可以配置 GitHub Actions 来：
+   - 自动检查远程仓库的更新
+   - 当有新的提交时发送通知
+   - 自动运行测试和构建
 
 通过遵循以上步骤，你可以：
 - 及时获取其他仓库的新功能
@@ -145,5 +140,5 @@ git pull origin develop && git push origin develop
 - 减少合并冲突带来的风险
 
 记住：合并前要仔细检查变更内容，确保新功能与现有代码兼容。
-备用命令：清理不存在的远程分支`git fetch --prune`
+备用命令：清理不存在的远程分支 `git fetch --prune`
 
