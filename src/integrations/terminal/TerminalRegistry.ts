@@ -17,7 +17,7 @@ export class TerminalRegistry {
 		const terminal = vscode.window.createTerminal({
 			cwd,
 			name: "Cline",
-			iconPath: new vscode.ThemeIcon("robot"),
+			iconPath: vscode.ThemeIcon.File,
 		})
 		const newInfo: TerminalInfo = {
 			terminal,
