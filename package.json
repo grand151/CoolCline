@@ -9,7 +9,10 @@
 		"theme": "dark"
 	},
 	"engines": {
-		"vscode": "^1.94.0"
+		"vscode": "^1.84.0"
+	},
+	"vscodeVersions": {
+		"recommended": "1.94.0"
 	},
 	"author": {
 		"name": "Cline Bot Inc."
@@ -152,7 +155,7 @@
 		"@types/mocha": "^10.0.10",
 		"@types/node": "^20.17.10",
 		"@types/should": "^11.2.0",
-		"@types/vscode": "^1.96.0",
+		"@types/vscode": "^1.84.0",
 		"@typescript-eslint/eslint-plugin": "^8.19.0",
 		"@typescript-eslint/parser": "^8.19.0",
 		"@vscode/test-cli": "^0.0.9",

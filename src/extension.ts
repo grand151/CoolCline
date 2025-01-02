@@ -22,6 +22,55 @@ let outputChannel: vscode.OutputChannel
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
+	// 从 package.json 读取版本要求
+	const packageJson = require('../package.json');
+	const minimumVersion = packageJson.engines.vscode.replace('^', '');  // 移除 ^ 前缀
+	const recommendedVersion = packageJson.vscodeVersions.recommended;
+	
+	const currentVersion = vscode.version;
+	console.log(`Current VSCode version: ${currentVersion}, Required: ${minimumVersion}, Recommended: ${recommendedVersion}`);
+	
+	// 检查最低版本要求
+	if (compareVersions(currentVersion, minimumVersion) < 0) {
+		vscode.window.showErrorMessage(
+			`Cool Cline 需要 VS Code ${minimumVersion} 或更高版本。\n` +
+			`您当前的版本是 ${currentVersion}，请更新您的 VS Code。`,
+			"下载新的 VS Code"
+		).then(selection => {
+			if (selection === "下载新的 VS Code") {
+				vscode.env.openExternal(
+					vscode.Uri.parse("https://code.visualstudio.com/download")
+				);
+			}
+		});
+		return; // 终止插件激活
+	}
+	
+	// 确保在主线程上执行版本检查
+	setTimeout(async () => {
+		if (compareVersions(currentVersion, recommendedVersion) < 0) {
+			const limitations = [
+				"终端集成功能 - 无法在终端中直接执行命令",
+				"实时命令输出 - 无法在命令执行时获取实时反馈",
+				"自动错误修复 - 无法自动响应服务器错误",
+			].join("\n• ");
+
+			const selection = await vscode.window.showWarningMessage(
+				`Cool Cline 检测到您使用的编辑器版本（${currentVersion}）低于推荐版本（${recommendedVersion}）。\n\n` +
+				`以下功能将受到限制：\n ${limitations}\n\n` +
+				`建议更新编辑器以获得完整功能。`,
+				"继续使用",
+				"下载新的 VS Code"
+			);
+
+			if (selection === "下载新的 VS Code") {
+				await vscode.env.openExternal(
+					vscode.Uri.parse("https://code.visualstudio.com/download")
+				);
+			}
+		}
+	}, 1000); // 延迟 1 秒执行，确保 VSCode 环境已完全加载
+
 	outputChannel = vscode.window.createOutputChannel("Cline")
 	context.subscriptions.push(outputChannel)
 
@@ -143,4 +192,23 @@ export function activate(context: vscode.ExtensionContext) {
 // This method is called when your extension is deactivated
 export function deactivate() {
 	outputChannel.appendLine("Cline extension deactivated")
+}
+
+// 版本比较函数
+function compareVersions(v1: string, v2: string): number {
+	try {
+		const v1Parts = v1.split('.').map(Number);
+		const v2Parts = v2.split('.').map(Number);
+		
+		for (let i = 0; i < Math.max(v1Parts.length, v2Parts.length); i++) {
+			const v1Part = v1Parts[i] || 0;
+			const v2Part = v2Parts[i] || 0;
+			if (v1Part > v2Part) return 1;
+			if (v1Part < v2Part) return -1;
+		}
+		return 0;
+	} catch (error) {
+		console.error('Version comparison error:', error);
+		return 0;
+	}
 }
