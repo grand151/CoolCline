@@ -18,7 +18,7 @@
 	"publisher": "saoudrizwan",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/chatterzhao/cool-cline"
+		"url": "https://github.com/coolcline/coolcline"
 	},
 	"homepage": "https://cline.bot",
 	"categories": ["AI", "Chat", "Programming Languages", "Education", "Snippets", "Testing"],

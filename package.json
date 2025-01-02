@@ -1,5 +1,5 @@
 {
-	"name": "cool-cline",
+	"name": "coolcline",
 	"displayName": "Cool Cline",
 	"description": "Cool Cline is an agentic coding assistant that combines the best features of Cline, Roo Clineand Bao Cline. Working seamlessly with your **Command Line Interface** and **Editor**, it brings you the most powerful AI development experience. Thanks to all their Clines contributors!",
 	"version": "4.0.1",
@@ -15,12 +15,12 @@
 		"name": "Cline Bot Inc."
 	},
 	"license": "Apache-2.0",
-	"publisher": "chatterzhao",
+	"publisher": "coolcline",
 	"repository": {
 		"type": "git",
-		"url": "https://gitee.com/zhaoquan/cool-cline"
+		"url": "https://gitee.com/coolcline/coolcline"
 	},
-	"homepage": "https://gitee.com/zhaoquan/cool-cline",
+	"homepage": "https://gitee.com/coolcline/coolcline",
 	"categories": [
 		"AI",
 		"Chat",

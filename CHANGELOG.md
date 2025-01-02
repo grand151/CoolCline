@@ -1,17 +1,17 @@
 # Change Log
-[`Cool Cline`](https://github.com/chatterzhao/cool-cline.git) is an agentic coding assistant that combines the best features of [Cline](https://github.com/chatterzhao/cool-cline.git), [Roo Cline](https://github.com/RooVetGit/Roo-Cline.git) and [Bao Cline](https://github.com/jnorthrup/Bao-Cline.git). Working seamlessly with your **Command Line Interface** and **Editor**, it brings you the most powerful AI development experience. Thanks to all their `Clines` contributors!
+[`Cool Cline`](https://github.com/coolcline/coolcline.git) is an agentic coding assistant that combines the best features of [Cline](https://github.com/coolcline/coolcline.git), [Roo Cline](https://github.com/RooVetGit/Roo-Cline.git) and [Bao Cline](https://github.com/jnorthrup/Bao-Cline.git). Working seamlessly with your **Command Line Interface** and **Editor**, it brings you the most powerful AI development experience. Thanks to all their `Clines` contributors!
 
 > [简体中文 CHANGELOG.md](CHANGELOG_zh.md)
 
 Sync release
-- GitHub：[chatterzhao/cool-cline](https://github.com/chatterzhao/cool-cline.git)
-- Gitee：[zhaoquan/cool-cline](https://gitee.com/zhaoquan/cool-cline.git)
+- GitHub：[coolcline/coolcline](https://github.com/coolcline/coolcline.git)
+- Gitee：[coolcline/coolcline](https://gitee.com/coolcline/coolcline.git)
 
 
 
 
 ## [4.0.1]
-cool-cline 4.0.1 version update includes:
+Cool Cline 4.0.1 version update includes:
 - Merged updates from cline 3.0.10, including:
   - Added DeepSeek provider support
   - Fixed DeepSeek context window limit error
@@ -19,7 +19,7 @@ cool-cline 4.0.1 version update includes:
   - Improved quote escaping in system notifications
 - Note: Intentionally skipped cline's version number update commit (f4590ce) as we use our own versioning system
 
-`Cool Cline` is an agentic coding assistant that combines the best features of [Cline](https://github.com/chatterzhao/cool-cline.git), [Roo Cline](https://github.com/RooVetGit/Roo-Cline.git) and [Bao Cline](https://github.com/jnorthrup/Bao-Cline.git). Working seamlessly with your **Command Line Interface** and **Editor**, it brings you the most powerful AI development experience. Thanks to all their contributors!
+`Cool Cline` is an agentic coding assistant that combines the best features of [Cline](https://github.com/coolcline/coolcline.git), [Roo Cline](https://github.com/RooVetGit/Roo-Cline.git) and [Bao Cline](https://github.com/jnorthrup/Bao-Cline.git). Working seamlessly with your **Command Line Interface** and **Editor**, it brings you the most powerful AI development experience. Thanks to all their contributors!
 
 > ########### Cool Cline ⬆️ ###########
 
@@ -153,7 +153,7 @@ cool-cline 4.0.1 version update includes:
 
 ## [2.0.6]
 
-- Update URLs to https://github.com/chatterzhao/cool-cline
+- Update URLs to https://github.com/coolcline/coolcline
 
 ## [2.0.5]
 

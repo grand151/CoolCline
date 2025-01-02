@@ -1,7 +1,7 @@
 # Contributing to Cool Cline
 [简体中文 CONTRIBUTING_zh.md](CONTRIBUTING_zh.md)
 
-[`Cool Cline`](https://github.com/chatterzhao/cool-cline.git) is an agentic coding assistant that combines the best features of [Cline](https://github.com/chatterzhao/cool-cline.git), [Roo Cline](https://github.com/RooVetGit/Roo-Cline.git) and [Bao Cline](https://github.com/jnorthrup/Bao-Cline.git). Working seamlessly with your **Command Line Interface** and **Editor**, it brings you the most powerful AI development experience. Thanks to all their `Clines` contributors!
+[`Cool Cline`](https://github.com/coolcline/coolcline.git) is an agentic coding assistant that combines the best features of [Cline](https://github.com/coolcline/coolcline.git), [Roo Cline](https://github.com/RooVetGit/Roo-Cline.git) and [Bao Cline](https://github.com/jnorthrup/Bao-Cline.git). Working seamlessly with your **Command Line Interface** and **Editor**, it brings you the most powerful AI development experience. Thanks to all their `Clines` contributors!
 
 Thank you for considering contributing to Cool Cline! This guide will help you understand how to participate in project development.
 
@@ -21,9 +21,9 @@ Local-only branches:
 - `devfix/*` branches: Bug fixes for develop branch
 - `release/*` branches: Release preparation
 
-## Fork the `cool-cline` Repository
-- Gitee: [https://gitee.com/zhaoquan/cool-cline.git](https://gitee.com/zhaoquan/cool-cline.git)
-- GitHub: [https://github.com/chatterzhao/cool-cline.git](https://github.com/chatterzhao/cool-cline.git)
+## Fork the `coolcline` Repository
+- Gitee: [https://gitee.com/coolcline/coolcline.git](https://gitee.com/coolcline/coolcline.git)
+- GitHub: [https://github.com/coolcline/coolcline.git](https://github.com/coolcline/coolcline.git)
 
 Click the `fork` button to fork the repository to your Gitee or GitHub account.
 
@@ -34,16 +34,16 @@ Click the `fork` button to fork the repository to your Gitee or GitHub account.
 ```bash
 # Execute in command line
 # gitee
-git clone https://gitee.com/<your-gitee-username>/cool-cline.git
+git clone https://gitee.com/<your-gitee-username>/coolcline.git
 # github 
-git clone https://github.com/<your-github-username>/cool-cline.git
+git clone https://github.com/<your-github-username>/coolcline.git
 ```
 
 ## Prepare Development Branch in VSCode:
 ```bash
 # Execute in command line
-cd cool-cline # Enter project directory
-code cool-cline # Open project
+cd coolcline # Enter project directory
+code coolcline # Open project
 
 # Continue in command line or VSCode terminal
 git checkout develop # Switch to develop branch

@@ -3,7 +3,7 @@
 >
 > [English： CHANGELOG.md](CHANGELOG.md)
 
-[`Cool Cline`](https://github.com/chatterzhao/cool-cline.git) is an agentic coding assistant that combines the best features of [Cline](https://github.com/chatterzhao/cool-cline.git), [Roo Cline](https://github.com/RooVetGit/Roo-Cline.git) and [Bao Cline](https://github.com/jnorthrup/Bao-Cline.git). Working seamlessly with your **Command Line Interface** and **Editor**, it brings you the most powerful AI development experience. Thanks to all their `Clines` contributors!
+[`Cool Cline`](https://github.com/coolcline/coolcline.git) is an agentic coding assistant that combines the best features of [Cline](https://github.com/coolcline/coolcline.git), [Roo Cline](https://github.com/RooVetGit/Roo-Cline.git) and [Bao Cline](https://github.com/jnorthrup/Bao-Cline.git). Working seamlessly with your **Command Line Interface** and **Editor**, it brings you the most powerful AI development experience. Thanks to all their `Clines` contributors!
 
 
 Thanks to [Claude 3.5 Sonnet's agentic coding capabilities](https://www-cdn.anthropic.com/fed9cc193a14b84131812372d8d5857f8f304c52/Model_Card_Claude_3_Addendum.pdf), Cline can handle complex software development tasks step-by-step. With tools that let him create & edit files, explore large projects, use the browser, and execute terminal commands (after you grant permission), he can assist you in ways that go beyond code completion or tech support. Cool Cline can even use the Model Context Protocol (MCP) to create new tools and extend his own capabilities. While autonomous AI scripts traditionally run in sandboxed environments, this extension provides a human-in-the-loop GUI to approve every file change and terminal command, providing a safe and accessible way to explore the potential of agentic AI.
@@ -114,16 +114,16 @@ To contribute to the project, start with our [Contributing Guide](CONTRIBUTING.m
 1. Clone the repository :
     ```bash
     # gitee
-    git clone https://gitee.com/zhaoquan/cool-cline.git
+    git clone https://gitee.com/coolcline/coolcline.git
     # github
-    git clone https://github.com/chatterzhao/cool-cline.git
+    git clone https://github.com/coolcline/coolcline.git
     ```
 2. Open the project in VSCode and prepare branch(suggest follow gitflow workflow):
     ```bash
     # enter project directory   
-    cd cool-cline
+    cd coolcline
     # open project
-    code cool-cline
+    code coolcline
     # create and switch to develop branch
     git checkout -b develop origin/develop
     # create feature branch

@@ -141,7 +141,7 @@ main() {
     # 1. 在 https://dev.azure.com 创建 token
     # 2. 使用命令 `vsce login <publisher-name>`进行登录
     # publisher-name> 就是 package.json 中的 "publisher" 字段的内容
-    # 例如："publisher": "chatterzhao"
+    # 例如："publisher": "coolcline"
     # 3. 使用命令 `vsce package` 打包
     # 4. 使用命令 `vsce publish` 发布
     # 5. 使用命令 `vsce logout` 登出

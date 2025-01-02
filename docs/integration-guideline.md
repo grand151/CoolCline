@@ -1,13 +1,13 @@
 # 整和 cline、Roo-Cline、Bao-Cline
 > Cool Cline 是基于 cline 扩展的多个 fork 版本整合而成，两个平台同步提交
 >
-> - GitHub: [chatterzhao/cool-cline](https://github.com/chatterzhao/cool-cline.git)
-> - Gitee: [zhaoquan/cool-cline](https://gitee.com/zhaoquan/cool-cline.git)
+> - GitHub: [coolcline/coolcline](https://github.com/coolcline/coolcline.git)
+> - Gitee: [coolcline/coolcline](https://gitee.com/coolcline/coolcline.git)
 
 ### 为什么要做 Cool Cline ？
 vscode 的 cline 扩展有多个 fork 版本，这让我很困惑，不知道哪个功能最全最好用的，目前他们分别是:
 
-- [cline/cline](https://github.com/chatterzhao/cool-cline.git)
+- [cline/cline](https://github.com/coolcline/coolcline.git)
 - [RooVetGit/Roo-Cline](https://github.com/RooVetGit/Roo-Cline.git)
 - [jnorthrup/Bao-Cline](https://github.com/jnorthrup/Bao-Cline.git)
 - ...
@@ -17,21 +17,21 @@ vscode 的 cline 扩展有多个 fork 版本，这让我很困惑，不知道哪
 
 ### 1. 创建新的空仓库
 
-在 GitHub 上创建一个新的空仓库。假设你的 GitHub 用户名是 `chatterzhao`，仓库名为 `cool-cline`，那么仓库地址将是 `git@github.com:chatterzhao/cool-cline.git` 或 `https://github.com/chatterzhao/cool-cline.git`。
+在 GitHub 上创建一个新的空仓库。假设你的 GitHub 用户名是 `coolcline`，仓库名为 `coolcline`，那么仓库地址将是 `git@github.com:coolcline/coolcline.git` 或 `https://github.com/coolcline/coolcline.git`。
 
 ### 2. 克隆新仓库到本地
 
 ```bash
-git clone git@github.com:chatterzhao/cool-cline.git
-cd cool-cline
+git clone git@github.com:coolcline/coolcline.git
+cd coolcline
 ```
 
 ### 3. 添加所有源仓库作为远程仓库
 
 ```bash
 # 添加主要开发平台
-git remote add github git@github.com:chatterzhao/cool-cline.git
-git remote add gitee git@gitee.com:chatterzhao/cool-cline.git
+git remote add github git@github.com:coolcline/coolcline.git
+git remote add gitee git@gitee.com:coolcline/coolcline.git
 
 # 添加需要整合的上游仓库
 git remote add cline git@github.com:cline/cline.git
@@ -84,9 +84,9 @@ git diff --stat integration/cline/main..cline/main
 1. 当合并到上游仓库是发布版本的提交时，在 CHANGELOG.md 中记录合并的内容：
 
     ```markdown
-    ## [cool-cline 新版本号]
+    ## [Cool Cline 新版本号]
 
-    - 合并了 cline x.x.x 版本的更新，包括：
+    - 合并了 Cline x.x.x 版本的更新，包括：
         - 具体更新内容 1
         - 具体更新内容 2
     - 注意：有意跳过了某些提交（提交hash），原因说明

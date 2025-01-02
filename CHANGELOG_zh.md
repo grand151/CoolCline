@@ -1,15 +1,15 @@
 # 更新日志
-[`Cool Cline`](https://gitee.com/zhaoquan/cool-cline.git) 是一个融合了 [Cline](https://github.com/chatterzhao/cool-cline.git)、[Roo Cline](https://github.com/RooVetGit/Roo-Cline.git) 和 [Bao Cline](https://github.com/jnorthrup/Bao-Cline.git) 最佳特性的主动式编程助手。它能与你的**命令行界面**和**编辑器**无缝协作，带来最强大的 AI 开发体验。感谢所有`Clines`项目的贡献者！
+[`Cool Cline`](https://gitee.com/coolcline/coolcline.git) 是一个融合了 [Cline](https://github.com/coolcline/coolcline.git)、[Roo Cline](https://github.com/RooVetGit/Roo-Cline.git) 和 [Bao Cline](https://github.com/jnorthrup/Bao-Cline.git) 最佳特性的主动式编程助手。它能与你的**命令行界面**和**编辑器**无缝协作，带来最强大的 AI 开发体验。感谢所有`Clines`项目的贡献者！
 
 > [English CHANGELOG.md](CHANGELOG.md)
 
 两平台同步发布
-- GitHub：[chatterzhao/cool-cline](https://github.com/chatterzhao/cool-cline.git)
-- Gitee：[zhaoquan/cool-cline](https://gitee.com/zhaoquan/cool-cline.git)
+- GitHub：[coolcline/coolcline](https://github.com/coolcline/coolcline.git)
+- Gitee：[coolcline/coolcline](https://gitee.com/coolcline/coolcline.git)
 
 
 ## [4.0.1]
-cool-cline 4.0.1 版本更新，包括：
+Cool Cline 4.0.1 版本更新，包括：
 - 合并了 cline 3.0.10 版本的更新，包括：
   - 添加 DeepSeek 提供商支持
   - 修复 DeepSeek 的上下文窗口限制错误
@@ -120,7 +120,7 @@ cool-cline 4.0.1 版本更新，包括：
 - 各种错误修复
 
 ## [2.0.6]
-- 更新 URL 为 https://github.com/chatterzhao/cool-cline
+- 更新 URL 为 https://github.com/coolcline/coolcline
 
 ## [2.0.5]
 - 修复了在 write_to_file 期间切换标签页时 Cline 的编辑会流入活动标签页的问题

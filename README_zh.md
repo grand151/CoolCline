@@ -4,7 +4,7 @@
 >  [简体中文： CHANGELOG_zh.md](CHANGELOG_zh.md)
 
 
-[`Cool Cline`](https://gitee.com/zhaoquan/cool-cline.git) 是一个融合了 [Cline](https://github.com/chatterzhao/cool-cline.git)、[Roo Cline](https://github.com/RooVetGit/Roo-Cline.git) 和 [Bao Cline](https://github.com/jnorthrup/Bao-Cline.git) 最佳特性的主动式编程助手。它能与你的**命令行界面**和**编辑器**无缝协作，带来最强大的 AI 开发体验。感谢所有`Clines`项目的贡献者！
+[`Cool Cline`](https://gitee.com/coolcline/coolcline.git) 是一个融合了 [Cline](https://github.com/coolcline/coolcline.git)、[Roo Cline](https://github.com/RooVetGit/Roo-Cline.git) 和 [Bao Cline](https://github.com/jnorthrup/Bao-Cline.git) 最佳特性的主动式编程助手。它能与你的**命令行界面**和**编辑器**无缝协作，带来最强大的 AI 开发体验。感谢所有`Clines`项目的贡献者！
 
 
 得益于 [Claude 3.5 Sonnet 的主动编码能力](https://www-cdn.anthropic.com/fed9cc193a14b84131812372d8d5857f8f304c52/Model_Card_Claude_3_Addendum.pdf)，Cool Cline 能够逐步处理复杂的软件开发任务。通过允许他创建和编辑文件、探索大型项目、使用浏览器以及执行终端命令（在你授权后）的工具，他能够以超越代码补全或技术支持的方式为你提供帮助。Cool Cline 甚至可以使用模型上下文协议（MCP）来创建新工具并扩展自身能力。虽然传统上自主 AI 脚本在沙盒环境中运行，但这个扩展提供了一个人机交互的图形界面来批准每个文件更改和终端命令，为探索主动式 AI 的潜力提供了一个安全且易用的方式。

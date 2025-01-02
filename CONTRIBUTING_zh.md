@@ -1,5 +1,5 @@
 # 贡献指南
-[`Cool Cline`](https://gitee.com/zhaoquan/cool-cline.git) 是一个融合了 [Cline](https://github.com/chatterzhao/cool-cline.git)、[Roo Cline](https://github.com/RooVetGit/Roo-Cline.git) 和 [Bao Cline](https://github.com/jnorthrup/Bao-Cline.git) 最佳特性的主动式编程助手。它能与你的**命令行界面**和**编辑器**无缝协作，带来最强大的 AI 开发体验。感谢所有`Clines`项目的贡献者！
+[`Cool Cline`](https://gitee.com/coolcline/coolcline.git) 是一个融合了 [Cline](https://github.com/coolcline/coolcline.git)、[Roo Cline](https://github.com/RooVetGit/Roo-Cline.git) 和 [Bao Cline](https://github.com/jnorthrup/Bao-Cline.git) 最佳特性的主动式编程助手。它能与你的**命令行界面**和**编辑器**无缝协作，带来最强大的 AI 开发体验。感谢所有`Clines`项目的贡献者！
 
 感谢你考虑为 Cool Cline 做出贡献！本指南将帮助你了解如何参与项目开发。
 
@@ -20,10 +20,10 @@
 - `release/*` 分支：版本发布准备
 
 
-## Fork `cool-cline` 仓库
-- Gitee：[https://gitee.com/zhaoquan/cool-cline.git](https://gitee.com/zhaoquan/cool-cline.git)
+## Fork `coolcline` 仓库
+- Gitee：[https://gitee.com/coolcline/coolcline.git](https://gitee.com/coolcline/coolcline.git)
 
-- GitHub: [https://github.com/chatterzhao/cool-cline.git](https://github.com/chatterzhao/cool-cline.git)
+- GitHub: [https://github.com/coolcline/coolcline.git](https://github.com/coolcline/coolcline.git)
 
 点击 `fork` 按钮，将仓库 fork 到您的 Gitee 或 GitHub 账户下
 
@@ -35,16 +35,16 @@
 ```bash
     # 在命令行中执行命令
     # gitee
-    git clone https://gitee.com/<your-gitee-username>/cool-cline.git
+    git clone https://gitee.com/<your-gitee-username>/coolcline.git
     # github 
-    git clone https://github.com/<your-github-username>/cool-cline.git
+    git clone https://github.com/<your-github-username>/coolcline.git
 ```
 
 ## 在 VSCode 中准备开发分支：
 ```bash
     # 在命令行中执行命令
-    cd cool-cline # 进入项目目录
-    code cool-cline # 打开项目
+    cd coolcline # 进入项目目录
+    code coolcline # 打开项目
 
     # 继续在命令行中或在 VSCode 的终端界面执行命令
     git checkout develop # 切换到 develop 分支
