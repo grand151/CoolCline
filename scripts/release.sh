@@ -75,6 +75,9 @@ check_code_quality() {
 main() {
     print_message "开始发布流程..."
     
+    # 切换到 develop 分支
+    git checkout develop
+
     # 检查工作目录状态
     check_uncommitted_changes
     check_develop_branch
@@ -95,39 +98,63 @@ main() {
     fi
     
     # 创建并切换到 release 分支
-    print_message "创建 release 分支..."
+    print_message "基于 develop 分支创建 release 分支..."
     git checkout -b release || exit 1
     
-    # 合并到 main 分支
-    print_message "合并到 main 分支..."
+    # 合并到 main 分支（有冲突解决冲突）
+    print_message "将release 分支合并到 main 分支..."
     git checkout main || git checkout -b main
     git merge release || exit 1
     
     # 创建版本标签
-    print_message "创建版本标签 v$version..."
+    print_message "在 main 分支上创建版本标签 v$version..."
     git tag -a "v$version" -m "Version $version" || exit 1
     
     # 合并回 develop 分支
-    print_message "合并回 develop 分支..."
+    print_message "将 main 分支合并回 develop 分支..."
     git checkout develop
-    git merge release || exit 1
+    git merge main || exit 1
     
     # 推送所有更改
     print_message "推送更改到远程仓库..."
-    git push origin main || exit 1
-    git push origin develop || exit 1
-    git push origin release || exit 1
-    git push --tags || exit 1
+    # github 平台
+    git push github main || exit 1
+    git push github develop || exit 1
+    git push github --tags || exit 1
+    # gitee 平台
+    git push gitee main || exit 1
+    git push gitee develop || exit 1
+    git push gitee --tags || exit 1
     
+
     # 清理本地和远程分支
-    print_message "清理本地和远程分支..."
+    print_message "清理本地和远程的 release 分支..."
     git branch -d release
-    git push origin --delete release || print_warning "删除远程 release 分支失败，请手动删除"
+    git push github --delete release || print_warning "删除远程 release 分支失败，请手动删除"
+    git push gitee --delete release || print_warning "删除远程 release 分支失败，请手动删除"
     
     print_message "发布流程完成！"
-    print_message "现在你可以："
-    echo "1. 在 GitHub 上创建一个新的发布（release）"
-    echo "2. 发布到 VS Code 市场"
+
+    # 发布到 VS Code 市场
+    print_message "现在你可以准备发布到 VS Code 市场，发布前再次检查 package.json、中英README.md 和 中英CHANGELOG.md 文件是否正确"
+    # 安装vsce 和 ovsx（可选）： `bun add -d vsce ovsx`
+    # 1. 在 https://dev.azure.com 创建 token
+    # 2. 使用命令 `vsce login <publisher-name>`进行登录
+    # publisher-name> 就是 package.json 中的 "publisher" 字段的内容
+    # 例如："publisher": "chatterzhao"
+    # 3. 使用命令 `vsce package` 打包
+    # 4. 使用命令 `vsce publish` 发布
+    # 5. 使用命令 `vsce logout` 登出
+    # 6. 使用命令 `vsce unpublish <publisher-name>.<extension-name>` 取消发布
+    # 7. 使用命令 `vsce clean` 清理
+
+    # 8. 发布到 OpenVSX 市场（可选）
+    # 9. 在 https://open-vsx.org 创建 token
+    # 10. 使用命令 `ovsx publish` 发布
+    # 11. 使用命令 `ovsx logout` 登出
+    # 12. 使用命令 `ovsx unpublish <publisher-name>.<extension-name>` 取消发布
+    # 13. 使用命令 `ovsx clean` 清理
+
 }
 
 # 执行主函数

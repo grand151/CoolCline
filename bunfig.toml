@@ -10,3 +10,6 @@ registry = "https://registry.npmmirror.com/"
 
 [install.vsce]
 registry = "https://registry.npmmirror.com/"
+
+[install.ovsx]
+registry = "https://registry.npmmirror.com/"
