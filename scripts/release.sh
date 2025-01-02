@@ -50,19 +50,24 @@ get_version() {
 # 检查代码质量和测试
 check_code_quality() {
     print_message "运行代码质量检查..."
-    
+
+    # 先自动修复格式错误
+    print_message "自动修复格式错误..."
+    bun run format:fix # 自动修复格式错误
+
+    # 检查是否有文件被修改
+    if [[ -n $(git status -s) ]]; then
+        print_warning "代码格式已被自动修复，请检查更改并提交"
+        git status
+        exit 1
+    fi
+
     # 运行 lint
     if ! bun run lint; then
         print_error "Lint 检查失败"
         exit 1
     fi
-    
-    # 运行 format 检查
-    if ! bun run format --check; then
-        print_error "代码格式检查失败"
-        exit 1
-    fi
-    
+
     # 运行测试
     print_message "运行测试..."
     if ! bun test; then

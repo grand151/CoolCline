@@ -743,11 +743,8 @@ const ChatView = ({ isHidden, showAnnouncement, hideAnnouncement, showHistoryVie
 					{showAnnouncement && <Announcement version={version} hideAnnouncement={hideAnnouncement} />}
 					<div style={{ padding: "0 20px", flexShrink: 0 }}>
 						<p>
-							Cool Cline (
-							<a href="https://github.com/coolcline/coolcline.git">
-								https://github.com/coolcline/coolcline.git
-							</a>
-							) is an agentic coding assistant that combines the best features of{" "}
+							<a href="https://github.com/coolcline/coolcline.git">Cool Cline</a>, is an agentic coding
+							assistant that combines the best features of{" "}
 							<a href="https://github.com/coolcline/coolcline.git">Cline</a>,{" "}
 							<a href="https://github.com/RooVetGit/Roo-Cline.git">Roo Cline</a> and{" "}
 							<a href="https://github.com/jnorthrup/Bao-Cline.git">Bao Cline</a>. Working seamlessly with
