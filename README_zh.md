@@ -1,36 +1,37 @@
-# Cool Cline – OpenRouter 上使用排名 \#x
+# Cool Cline
+>  [English： README.md](README.md)
+>
+>  [简体中文： CHANGELOG_zh.md](CHANGELOG_zh.md)
 
-Cool Cline 是一个整合了 [Cline](https://github.com/chatterzhao/cool-cline.git)、[Roo Cline](https://github.com/RooVetGit/Roo-Cline.git) 和 [Bao Cline](https://github.com/jnorthrup/Bao-Cline.git) 优秀功能的 VSCode 扩展。感谢他们的贡献者！
 
-[English README.md](README.md)
+[`Cool Cline`](https://gitee.com/zhaoquan/cool-cline.git) 是一个融合了 [Cline](https://github.com/chatterzhao/cool-cline.git)、[Roo Cline](https://github.com/RooVetGit/Roo-Cline.git) 和 [Bao Cline](https://github.com/jnorthrup/Bao-Cline.git) 最佳特性的主动式编程助手。它能与你的**命令行界面**和**编辑器**无缝协作，带来最强大的 AI 开发体验。感谢所有`Clines`项目的贡献者！
 
-两个平台同步发布
-
-- GitHub：[chatterzhao/cool-cline](https://github.com/chatterzhao/cool-cline.git)
-- Gitee：[zhaoquan/cool-cline](https://gitee.com/zhaoquan/cool-cline.git)
-
-认识 Cool Cline，一个能够使用你的**命令行界面**和**编辑器**的 AI 助手。
 
 得益于 [Claude 3.5 Sonnet 的主动编码能力](https://www-cdn.anthropic.com/fed9cc193a14b84131812372d8d5857f8f304c52/Model_Card_Claude_3_Addendum.pdf)，Cool Cline 能够逐步处理复杂的软件开发任务。通过允许他创建和编辑文件、探索大型项目、使用浏览器以及执行终端命令（在你授权后）的工具，他能够以超越代码补全或技术支持的方式为你提供帮助。Cool Cline 甚至可以使用模型上下文协议（MCP）来创建新工具并扩展自身能力。虽然传统上自主 AI 脚本在沙盒环境中运行，但这个扩展提供了一个人机交互的图形界面来批准每个文件更改和终端命令，为探索主动式 AI 的潜力提供了一个安全且易用的方式。
 
+## 主要特性
+
+### 智能任务处理
 1. 输入你的任务并添加图片，将模型转换为功能性应用或通过截图修复错误。
 
 2. Cool Cline 首先通过分析你的文件结构和源代码抽象语法树（ASTs），运行正则表达式搜索，并阅读相关文件来快速了解现有项目。通过谨慎管理添加到上下文的信息，Cool Cline 可以为大型、复杂的项目提供有价值的帮助，而不会使上下文窗口过载。
 
-3. 一旦 Cool Cline 获得了所需的信息，他就能：
+### 强大的功能支持
+Cool Cline 获得所需信息后，能够：
 
-    - 创建和编辑文件，并在过程中监控代码检查器/编译器错误，使他能够主动修复诸如缺失导入和语法错误等问题。
-    - 直接在你的终端中执行命令并监控其输出，例如，在编辑文件后对开发服务器问题作出反应。
-    - 对于 Web 开发任务，Cool Cline 可以在无头浏览器中启动网站，进行点击、输入、滚动，并捕获截图和控制台日志，使他能够修复运行时错误和视觉 bug。
+- 创建和编辑文件，并在过程中监控代码检查器/编译器错误，使他能够主动修复诸如缺失导入和语法错误等问题。
+- 直接在你的终端中执行命令并监控其输出，例如，在编辑文件后对开发服务器问题作出反应。
+- 对于 Web 开发任务，Cool Cline 可以在无头浏览器中启动网站，进行点击、输入、滚动，并捕获截图和控制台日志，使他能够修复运行时错误和视觉 bug。
 
-4. 当任务完成时，Cool Cline 会通过类似 `open -a "Google Chrome" index.html` 的终端命令向你展示结果，你只需点击按钮即可运行。
+### 便捷的结果展示
+当任务完成时，Cool Cline 会通过类似 `open -a "Google Chrome" index.html` 的终端命令向你展示结果，你只需点击按钮即可运行。
 
 > [!提示]
 > 使用 `CMD/CTRL + Shift + P` 快捷键打开命令面板，输入 "Cool Cline: Open In New Tab" 在编辑器中以标签页形式打开扩展。这样你就可以在文件资源管理器旁边使用 Cool Cline，更清楚地看到他如何改变你的工作区。
 
 ### 使用任意 API 和模型
 
-Cool Cline 支持 OpenRouter、Anthropic、OpenAI、Google Gemini、AWS Bedrock、Azure 和 GCP Vertex 等 API 提供商。你还可以配置任何兼容 OpenAI 的 API，或通过 LM Studio/Ollama 使用本地模型。如果你使用 OpenRouter，扩展会获取他们的最新模型列表，让你能够在新模型推出时立即使用。
+Cool Cline 支持 OpenRouter、Anthropic、OpenAI、Google Gemini、DeepSeek、AWS Bedrock、Azure 和 GCP Vertex 等 API 提供商。你还可以配置任何兼容 OpenAI 的 API，或通过 LM Studio/Ollama 使用本地模型。如果你使用 OpenRouter，扩展会获取他们的最新模型列表，让你能够在新模型推出时立即使用。
 
 扩展还会跟踪整个任务循环和单个请求的总令牌数和 API 使用成本，让你随时了解支出情况。
 
@@ -74,33 +75,8 @@ Cool Cline 所做的所有更改都会记录在你文件的时间线中，提供
 
 ## 贡献
 
-要为项目做出贡献，请从我们的[贡献指南](CONTRIBUTING.md)开始了解基础知识。
-
-<details>
-<summary>本地开发说明</summary>
-
-1. 克隆仓库 _(需要 [git-lfs](https://git-lfs.com/))_:
-
-    ```bash
-    git clone https://github.com/chatterzhao/cool-cline.git
-    ```
-
-2. 在 VSCode 中打开项目：
-
-    ```bash
-    code cline
-    ```
-
-3. 安装扩展和 webview-gui 所需的依赖：
-
-    ```bash
-    bun run install:all
-    ```
-
-4. 按 `F5`（或 `运行`->`开始调试`）启动，打开一个加载了扩展的新 VSCode 窗口。（如果你在构建项目时遇到问题，可能需要安装 [esbuild problem matchers 扩展](https://marketplace.visualstudio.com/items?itemName=connor4312.esbuild-problem-matchers)。）
-
-</details>
+要为项目做出贡献，请查看我们的[贡献指南](CONTRIBUTING_zh.md)了解详细信息，包括如何设置本地开发环境、提交代码等完整说明。
 
 ## 许可证
 
-[Apache 2.0 © 2024 Cline Bot Inc.](./LICENSE)
+[Apache 2.0](./LICENSE)

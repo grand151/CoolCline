@@ -1,7 +1,7 @@
 {
 	"name": "cool-cline",
 	"displayName": "Cool Cline",
-	"description": "Autonomous coding agent right in your IDE, capable of creating/editing files, running commands, using the browser, and more with your permission every step of the way.",
+	"description": "Cool Cline is an agentic coding assistant that combines the best features of Cline, Roo Clineand Bao Cline. Working seamlessly with your **Command Line Interface** and **Editor**, it brings you the most powerful AI development experience. Thanks to all their Clines contributors!",
 	"version": "4.0.1",
 	"icon": "assets/icons/icon.png",
 	"galleryBanner": {
@@ -9,18 +9,18 @@
 		"theme": "dark"
 	},
 	"engines": {
-		"vscode": "^1.84.0"
+		"vscode": "^1.94.0"
 	},
 	"author": {
 		"name": "Cline Bot Inc."
 	},
 	"license": "Apache-2.0",
-	"publisher": "saoudrizwan",
+	"publisher": "chatterzhao",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/chatterzhao/cool-cline"
+		"url": "https://gitee.com/zhaoquan/cool-cline"
 	},
-	"homepage": "https://cline.bot",
+	"homepage": "https://gitee.com/zhaoquan/cool-cline",
 	"categories": [
 		"AI",
 		"Chat",
@@ -157,12 +157,14 @@
 		"@typescript-eslint/parser": "^8.19.0",
 		"@vscode/test-cli": "^0.0.9",
 		"@vscode/test-electron": "^2.4.1",
+		"concurrently": "^8.2.2",
 		"esbuild": "^0.21.5",
 		"eslint": "^8.57.1",
+		"ovsx": "^0.10.1",
 		"prettier": "^3.4.2",
 		"should": "^13.2.3",
 		"typescript": "^5.7.2",
-		"concurrently": "^8.2.2"
+		"vsce": "^2.15.0"
 	},
 	"dependencies": {
 		"@anthropic-ai/bedrock-sdk": "^0.10.4",

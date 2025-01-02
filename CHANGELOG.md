@@ -1,19 +1,27 @@
 # Change Log
+[`Cool Cline`](https://github.com/chatterzhao/cool-cline.git) is an agentic coding assistant that combines the best features of [Cline](https://github.com/chatterzhao/cool-cline.git), [Roo Cline](https://github.com/RooVetGit/Roo-Cline.git) and [Bao Cline](https://github.com/jnorthrup/Bao-Cline.git). Working seamlessly with your **Command Line Interface** and **Editor**, it brings you the most powerful AI development experience. Thanks to all their `Clines` contributors!
+
+> [简体中文 CHANGELOG.md](CHANGELOG_zh.md)
+
+Sync release
+- GitHub：[chatterzhao/cool-cline](https://github.com/chatterzhao/cool-cline.git)
+- Gitee：[zhaoquan/cool-cline](https://gitee.com/zhaoquan/cool-cline.git)
+
 
 
 
 ## [4.0.1]
-cool-cline 4.0.1 版本更新，包括：
-- 合并了 cline 3.0.10 版本的更新，包括：
-  - 添加 DeepSeek 提供商支持
-  - 修复 DeepSeek 的上下文窗口限制错误
-  - 优化 DeepSeek 的价格报告
-  - 改进系统通知中的引号转义
-- 注意：有意跳过了 cline 的版本号更新提交（f4590ce），因为我们使用自己的版本管理系统
+cool-cline 4.0.1 version update includes:
+- Merged updates from cline 3.0.10, including:
+  - Added DeepSeek provider support
+  - Fixed DeepSeek context window limit error
+  - Optimized DeepSeek price reporting
+  - Improved quote escaping in system notifications
+- Note: Intentionally skipped cline's version number update commit (f4590ce) as we use our own versioning system
 
-Cool Cline is a VSCode extension that combines the best features of Cline, Roo Cline, and Bao Cline. Thanks to all their contributors!
+`Cool Cline` is an agentic coding assistant that combines the best features of [Cline](https://github.com/chatterzhao/cool-cline.git), [Roo Cline](https://github.com/RooVetGit/Roo-Cline.git) and [Bao Cline](https://github.com/jnorthrup/Bao-Cline.git). Working seamlessly with your **Command Line Interface** and **Editor**, it brings you the most powerful AI development experience. Thanks to all their contributors!
 
-> ###################################################################
+> ########### Cool Cline ⬆️ ###########
 
 ## [3.0.9]
 

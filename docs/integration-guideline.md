@@ -1,17 +1,19 @@
 # 整和 cline、Roo-Cline、Bao-Cline
+> Cool Cline 是基于 cline 扩展的多个 fork 版本整合而成，两个平台同步提交
+>
+> - GitHub: [chatterzhao/cool-cline](https://github.com/chatterzhao/cool-cline.git)
+> - Gitee: [zhaoquan/cool-cline](https://gitee.com/zhaoquan/cool-cline.git)
 
-vscode 的 cline 扩展有多个 fork 版本，分别是:
-
-两个平台同步提交
-
-- GitHub: [chatterzhao/cool-cline](https://github.com/chatterzhao/cool-cline.git)
-- Gitee: [zhaoquan/cool-cline](https://gitee.com/zhaoquan/cool-cline.git)
+### 为什么要做 Cool Cline ？
+vscode 的 cline 扩展有多个 fork 版本，这让我很困惑，不知道哪个功能最全最好用的，目前他们分别是:
 
 - [cline/cline](https://github.com/chatterzhao/cool-cline.git)
 - [RooVetGit/Roo-Cline](https://github.com/RooVetGit/Roo-Cline.git)
 - [jnorthrup/Bao-Cline](https://github.com/jnorthrup/Bao-Cline.git)
+- ...
 
-想基于这些仓库创建一个新的整合项目，以便功能覆盖更广。以下是具体步骤：
+
+想基于这些仓库创建一个新的整合项目 Cool Cline，以便功能覆盖更广。以下是具体步骤：
 
 ### 1. 创建新的空仓库
 
