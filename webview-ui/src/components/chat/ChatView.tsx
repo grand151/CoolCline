@@ -743,8 +743,7 @@ const ChatView = ({ isHidden, showAnnouncement, hideAnnouncement, showHistoryVie
 					{showAnnouncement && <Announcement version={version} hideAnnouncement={hideAnnouncement} />}
 					<div style={{ padding: "0 20px", flexShrink: 0 }}>
 						<p>
-							Cool Cline is a VSCode extension that combines the best features of Cline, Roo Cline, and
-							Bao Cline. Thanks to all their contributors!
+						Cool Cline is an agentic coding assistant that combines the best features of Cline, Roo Cline and Bao Cline. Working seamlessly with your **Command Line Interface** and **Editor**, it brings you the most powerful AI development experience. Thanks to all their Clines contributors!
 						</p>
 						<p>What can I do for you?</p>
 						<p>

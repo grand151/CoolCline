@@ -1,7 +1,7 @@
 {
 	"name": "coolcline",
 	"displayName": "Cool Cline",
-	"description": "Cool Cline is an agentic coding assistant that combines the best features of Cline, Roo Clineand Bao Cline. Working seamlessly with your **Command Line Interface** and **Editor**, it brings you the most powerful AI development experience. Thanks to all their Clines contributors!",
+	"description": "Cool Cline is an agentic coding assistant that combines the best features of Cline, Roo Cline and Bao Cline. Working seamlessly with your **Command Line Interface** and **Editor**, it brings you the most powerful AI development experience. Thanks to all their Clines contributors!",
 	"version": "4.0.1",
 	"icon": "assets/icons/icon.png",
 	"galleryBanner": {
