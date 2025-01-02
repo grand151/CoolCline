@@ -1,21 +1,23 @@
 # Cool Cline
+
 > [简体中文： README_zh.md](README_zh.md)
 >
 > [English： CHANGELOG.md](CHANGELOG.md)
 
 [`Cool Cline`](https://github.com/coolcline/coolcline.git) is an agentic coding assistant that combines the best features of [Cline](https://github.com/coolcline/coolcline.git), [Roo Cline](https://github.com/RooVetGit/Roo-Cline.git) and [Bao Cline](https://github.com/jnorthrup/Bao-Cline.git). Working seamlessly with your **Command Line Interface** and **Editor**, it brings you the most powerful AI development experience. Thanks to all their `Clines` contributors!
 
-
 Thanks to [Claude 3.5 Sonnet's agentic coding capabilities](https://www-cdn.anthropic.com/fed9cc193a14b84131812372d8d5857f8f304c52/Model_Card_Claude_3_Addendum.pdf), Cline can handle complex software development tasks step-by-step. With tools that let him create & edit files, explore large projects, use the browser, and execute terminal commands (after you grant permission), he can assist you in ways that go beyond code completion or tech support. Cool Cline can even use the Model Context Protocol (MCP) to create new tools and extend his own capabilities. While autonomous AI scripts traditionally run in sandboxed environments, this extension provides a human-in-the-loop GUI to approve every file change and terminal command, providing a safe and accessible way to explore the potential of agentic AI.
 
 ## Key Features
 
 ### Intelligent Task Processing
+
 1. Enter your task and add images to convert mockups into functional apps or fix bugs with screenshots.
 
 2. Cool Cline starts by analyzing your file structure & source code ASTs, running regex searches, and reading relevant files to get up to speed in existing projects. By carefully managing what information is added to context, Cool Cline can provide valuable assistance even for large, complex projects without overwhelming the context window.
 
 ### Powerful Feature Support
+
 Once Cool Cline has the information he needs, he can:
 
 - Create and edit files + monitor linter/compiler errors along the way, letting him proactively fix issues like missing imports and syntax errors on his own.
@@ -23,6 +25,7 @@ Once Cool Cline has the information he needs, he can:
 - For web development tasks, Cool Cline can launch the site in a headless browser, click, type, scroll, and capture screenshots + console logs, allowing him to fix runtime errors and visual bugs.
 
 ### Convenient Result Presentation
+
 When a task is completed, Cool Cline will present the result to you with a terminal command like `open -a "Google Chrome" index.html`, which you run with a click of a button.
 
 > [!TIP]
@@ -120,7 +123,7 @@ To contribute to the project, start with our [Contributing Guide](CONTRIBUTING.m
     ```
 2. Open the project in VSCode and prepare branch(suggest follow gitflow workflow):
     ```bash
-    # enter project directory   
+    # enter project directory
     cd coolcline
     # open project
     code coolcline

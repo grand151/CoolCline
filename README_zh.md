@@ -1,22 +1,23 @@
 # Cool Cline
->  [English： README.md](README.md)
->
->  [简体中文： CHANGELOG_zh.md](CHANGELOG_zh.md)
 
+> [English： README.md](README.md)
+>
+> [简体中文： CHANGELOG_zh.md](CHANGELOG_zh.md)
 
 [`Cool Cline`](https://gitee.com/coolcline/coolcline.git) 是一个融合了 [Cline](https://github.com/coolcline/coolcline.git)、[Roo Cline](https://github.com/RooVetGit/Roo-Cline.git) 和 [Bao Cline](https://github.com/jnorthrup/Bao-Cline.git) 最佳特性的主动式编程助手。它能与你的**命令行界面**和**编辑器**无缝协作，带来最强大的 AI 开发体验。感谢所有`Clines`项目的贡献者！
-
 
 得益于 [Claude 3.5 Sonnet 的主动编码能力](https://www-cdn.anthropic.com/fed9cc193a14b84131812372d8d5857f8f304c52/Model_Card_Claude_3_Addendum.pdf)，Cool Cline 能够逐步处理复杂的软件开发任务。通过允许他创建和编辑文件、探索大型项目、使用浏览器以及执行终端命令（在你授权后）的工具，他能够以超越代码补全或技术支持的方式为你提供帮助。Cool Cline 甚至可以使用模型上下文协议（MCP）来创建新工具并扩展自身能力。虽然传统上自主 AI 脚本在沙盒环境中运行，但这个扩展提供了一个人机交互的图形界面来批准每个文件更改和终端命令，为探索主动式 AI 的潜力提供了一个安全且易用的方式。
 
 ## 主要特性
 
 ### 智能任务处理
+
 1. 输入你的任务并添加图片，将模型转换为功能性应用或通过截图修复错误。
 
 2. Cool Cline 首先通过分析你的文件结构和源代码抽象语法树（ASTs），运行正则表达式搜索，并阅读相关文件来快速了解现有项目。通过谨慎管理添加到上下文的信息，Cool Cline 可以为大型、复杂的项目提供有价值的帮助，而不会使上下文窗口过载。
 
 ### 强大的功能支持
+
 Cool Cline 获得所需信息后，能够：
 
 - 创建和编辑文件，并在过程中监控代码检查器/编译器错误，使他能够主动修复诸如缺失导入和语法错误等问题。
@@ -24,6 +25,7 @@ Cool Cline 获得所需信息后，能够：
 - 对于 Web 开发任务，Cool Cline 可以在无头浏览器中启动网站，进行点击、输入、滚动，并捕获截图和控制台日志，使他能够修复运行时错误和视觉 bug。
 
 ### 便捷的结果展示
+
 当任务完成时，Cool Cline 会通过类似 `open -a "Google Chrome" index.html` 的终端命令向你展示结果，你只需点击按钮即可运行。
 
 > [!提示]

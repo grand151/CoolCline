@@ -1,46 +1,47 @@
 # 贡献指南
-[`Cool Cline`](https://gitee.com/coolcline/coolcline.git) 是一个融合了 [Cline](https://github.com/coolcline/coolcline.git)、[Roo Cline](https://github.com/RooVetGit/Roo-Cline.git) 和 [Bao Cline](https://github.com/jnorthrup/Bao-Cline.git) 最佳特性的主动式编程助手。它能与你的**命令行界面**和**编辑器**无缝协作，带来最强大的 AI 开发体验。感谢所有`Clines`项目的贡献者！
+
+[Cool Cline](https://gitee.com/coolcline/coolcline.git) 是一个融合了 [Cline](https://github.com/coolcline/coolcline.git)、[Roo Cline](https://github.com/RooVetGit/Roo-Cline.git) 和 [Bao Cline](https://github.com/jnorthrup/Bao-Cline.git) 最佳特性的主动式编程助手。它能与你的**命令行界面**和**编辑器**无缝协作，带来最强大的 AI 开发体验。感谢所有 `Clines` 项目的贡献者！
 
 感谢你考虑为 Cool Cline 做出贡献！本指南将帮助你了解如何参与项目开发。
-
 
 ## Git 工作流程
 
 我们采用标准的 `gitflow` 流程规范（推荐您也使用）：
 
 线上线下分支
+
 - `main` 分支：稳定的发布版本
 - `develop` 分支：最新的开发版本
 
 仅在您本地的分支
+
 - `feature/*` 分支：新功能开发
 - `docs/*` 分支：文档更新
 - `hotfix/*` 分支：main 分支 bug 修复
 - `devfix/*` 分支：develop 分支 bug 修复
 - `release/*` 分支：版本发布准备
 
-
 ## Fork `coolcline` 仓库
+
 - Gitee：[https://gitee.com/coolcline/coolcline.git](https://gitee.com/coolcline/coolcline.git)
 
 - GitHub: [https://github.com/coolcline/coolcline.git](https://github.com/coolcline/coolcline.git)
 
 点击 `fork` 按钮，将仓库 fork 到您的 Gitee 或 GitHub 账户下
 
-
 ## 克隆仓库
 
 > 注意：develop 分支包含最新版本，main 分支是 develop 分支的发布版本：
 
 ```bash
-    # 在命令行中执行命令
-    # gitee
-    git clone https://gitee.com/<your-gitee-username>/coolcline.git
-    # github 
-    git clone https://github.com/<your-github-username>/coolcline.git
+# 在命令行中执行命令
+git clone https://gitee.com/<your-gitee-username>/coolcline.git
+# github
+git clone https://github.com/<your-github-username>/coolcline.git
 ```
 
 ## 在 VSCode 中准备开发分支：
+
 ```bash
     # 在命令行中执行命令
     cd coolcline # 进入项目目录
@@ -55,8 +56,11 @@
 ```
 
 ## 准备开发环境
+
 > bun 目前比 npm 更受欢迎，推荐使用 bun 来安装依赖。注意如果换 npm 请修改 `package.json` 文件内命令部分。
+
 1. 安装bun
+
     > 假如您还没有 bun，请先安装 bun，bun 官网：[https://bun.sh/](https://bun.sh/)
     >
     > macOS 安装 bun: `curl -fsSL https://bun.sh/install | bash`
@@ -64,12 +68,14 @@
     > windows 安装 bun: `powershell -c "irm bun.sh/install.ps1 | iex"`
 
 2. 安装依赖（必须）：
+
 ```bash
     # 在根目录执行命令，安装所有依赖，all 将同时安装根目录和 webview-ui/ 目录的依赖
     bun run install:all
 ```
 
 ## 调试
+
 1. 执行测试命令
 
 ```bash
@@ -79,8 +85,8 @@
 
 2. 启动开发环境：
    按 `F5`（或在 vscode 顶部菜单栏点击 `运行` -> `开始调试`）来启动一个加载了扩展的新 VSCode 窗口。
-   
-   > 注意：如果构建时遇到问题，可能需要安装 [esbuild problem matchers 扩展](https://marketplace.visualstudio.com/items?itemName=connor4312.esbuild-problem-matchers)。
+
+    > 注意：如果构建时遇到问题，可能需要安装 [esbuild problem matchers 扩展](https://marketplace.visualstudio.com/items?itemName=connor4312.esbuild-problem-matchers)。
 
 ## 贡献准则
 
